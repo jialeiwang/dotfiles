@@ -1,2 +1,1 @@
-dotfile
-=======
+Jialei Wang's dotfiles
