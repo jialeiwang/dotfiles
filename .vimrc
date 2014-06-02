@@ -137,6 +137,7 @@ syntax enable
 
 colorscheme desert
 set background=dark
+set guifont=Menlo\ Regular:h12
 
 " Set extra options when running in GUI mode
 if has("gui_running")

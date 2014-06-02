@@ -18,11 +18,13 @@ function proml {
     local   DARK_GRAY="\[\033[1;30m\]"
     # END OPTIONAL
     local     DEFAULT="\[\033[0m\]"
-    PS1="$RED[\$(date +%H:%M:%S)] $GREEN\u$DEFAULT@$PURPLE\h$DEFAULT:$TEAL\w$LIGHT_RED\$(parse_git_branch)$DEFAULT \$ "
+    #PS1="$RED[\$(date +%H:%M:%S)] $GREEN\u$DEFAULT@$PURPLE\h$DEFAULT:$TEAL\w$LIGHT_RED\$(parse_git_branch)$DEFAULT \$ "
+    PS1="$GREEN\u$DEFAULT$DEFAULT:$TEAL\w$LIGHT_GRAY\$(parse_git_branch)$DEFAULT \$ "
 }
 proml
 
-export PATH=$PATH:$HOME/bin:$HOME/local/usr/bin
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
@@ -41,18 +43,6 @@ if [ -f /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.
 fi
 if [ -f /Users/$USER/bin/virtualenvwrapper.sh ]; then
 	source /Users/$USER/bin/virtualenvwrapper.sh
-fi
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
 fi
 
 # Alias definitions.
