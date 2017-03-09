@@ -26,9 +26,6 @@ proml
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-
 # ubuntu
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 	source /usr/local/bin/virtualenvwrapper.sh
